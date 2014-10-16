@@ -1,38 +1,47 @@
-define(function(require) {
-	var letters = [
-		require('letters/g1'),
-		require('letters/r1'),
-		require('letters/e1'),
-		require('letters/e2'),
-		require('letters/t1'),
-		require('letters/i'),
-		require('letters/n'),
-		require('letters/g2'),
-		require('letters/s1'),
-		require('letters/f1'),
-		require('letters/r2'),
-		require('letters/o1'),
-		require('letters/m'),
-		require('letters/b'),
-		require('letters/o2'),
-		require('letters/c1'),
-		require('letters/o2'),
-		require('letters/u'),
-		require('letters/p'),
-		require('letters/f2'),
-		require('letters/e3'),
-		require('letters/s2'),
-		require('letters/t2'),
-		require('letters/c2'),
-		require('letters/a'),
-		require('letters/r3'),
-		require('letters/l'),
+(function() {
+	'use strict';
+	var assignments = [
+		['Boaz', 'g1'],
+		['Crash', 'r1'],
+		['Tyler', 'e1'],
+		['Claire', 'e2'],
+		['Yannick', 't1'],
+		['Kadam', 'i'],
+		['Rick', 'n'],
+		['Tyler', 'g2'],
+		['Irene', 's1'],
+		['James', 'f1'],
+		['Leo', 'r2'],
+		['Ben', 'o1'],
+		['Sue', 'm'],
+		['Z', 'b'],
+		['Mike', 'o2'],
+		['Brenden', 'c1'],
+		['Jasmin', 'o2'],
+		['Jenn', 'u'],
+		['Matt', 'p'],
+		['Corey', 'f2'],
+		['Bob', 'e3'],
+		['Jory', 's2'],
+		['Ashley', 't2'],
+		['Greg', 'c2'],
+		['Isaac', 'a'],
+		['April', 'r3'],
+		['Wilto', 'l']
 	];
+	var moduleIds = assignments.map(function(assignment) {
+		return 'letters/' + assignment[1];
+	});
 
-	letters.reduce(function(previous, addLetter) {
-		var elem = document.createElement('div');
-		elem.className = 'letter';
-		document.body.appendChild(elem);
-		return previous.then(addLetter.bind(null, elem));
-	}, new Promise(setTimeout));
-});
+	define(moduleIds, function() {
+		moduleIds.reduce(function(previous, moduleId, idx) {
+			var elem = document.createElement('div');
+			elem.className = 'letter';
+			elem.setAttribute('title', assignments[idx][0]);
+
+			document.body.appendChild(elem);
+
+			return previous.then(require(moduleId).bind(null, elem));
+		}, new Promise(setTimeout));
+	});
+}());
