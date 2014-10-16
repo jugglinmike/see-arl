@@ -8,7 +8,7 @@
 		['Yannick', 't1'],
 		['Kadam', 'i'],
 		['Rick', 'n'],
-		['Tyler', 'g2'],
+		['Adam', 'g2'],
 		['Irene', 's1'],
 		['James', 'f1'],
 		['Leo', 'r2'],
