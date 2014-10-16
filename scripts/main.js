@@ -17,7 +17,7 @@
 		['Z', 'b'],
 		['Mike', 'o2'],
 		['Brenden', 'c1'],
-		['Jasmin', 'o2'],
+		['Jasmin', 'o3'],
 		['Jenn', 'u'],
 		['Matt', 'p'],
 		['Corey', 'f2'],
