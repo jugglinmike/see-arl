@@ -1,0 +1,12 @@
+{
+  "name": "see-arl",
+  "version": "0.0.0",
+  "authors": [
+    "Mike Pennisi <mike@mikepennisi.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "requirejs": "~2.1.15"
+  }
+}
