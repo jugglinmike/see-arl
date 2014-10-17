@@ -2,6 +2,7 @@ define(function() {
   return function (elem) {
 
     var timer;
+    var messageBox;
     var messages = [
       [
         'who\'s this guy?',
@@ -39,17 +40,18 @@ define(function() {
       typer.style.top = 0;
       typer.style.left = 0;
       typer.style.right = 0;
-      typer.addEventListener('click', function () {
-        typer.len = 0;
-        clearInterval(timer);
-        show({
-          el: typer,
-          msg: messages[Math.floor(Math.random()*messages.length)]
-        });
-      });
       document.body.appendChild(typer);
       return typer;
     }
+
+    var start = function (typer, timer) {
+      typer.len = 0;
+      clearInterval(timer);
+      show({
+        el: typer,
+        msg: messages[Math.floor(Math.random()*messages.length)]
+      });
+    };
 
     var show = function (opts) {
       var el = opts.el;
@@ -74,6 +76,9 @@ define(function() {
       } else {
         el.innerHTML = text;
         timer = setInterval(flash.bind(null, opts), 450);
+        setTimeout(function () {
+          start(messageBox, timer);
+        }, 5000);
       }
     }
 
@@ -87,8 +92,8 @@ define(function() {
         el.innerHTML = body.replace(/_/, '');
       }
     }
-
-    var messageBox = createTyper();
+    messageBox = createTyper();
+    start(messageBox, timer);
     elem.style.fontSize = '100px';
     elem.innerHTML = 'e';
   };
