@@ -23,3 +23,7 @@ html, body {
 		transform: rotateZ(360deg);
 	}
 }
+
+iframe {
+  border: 0;
+}
