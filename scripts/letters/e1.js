@@ -35,7 +35,7 @@ define(function() {
       typer.style.color = '#fff';
       typer.style.padding = '0 10px';
       typer.style.cursor = 'pointer';
-      typer.style.position = 'absolute';
+      typer.style.position = 'fixed';
       typer.style.top = 0;
       typer.style.left = 0;
       typer.style.right = 0;
