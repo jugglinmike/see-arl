@@ -52,7 +52,6 @@ define(function(require) {
 		var j = 0;
 		var step = function _step() {
 			requestAnimationFrame(step);
-			ctx = $('canvas')[0].getContext('2d');
 			for (var i = 0; i * 8 < 300; i++) {
 				ctx.fillStyle = colors[(i + ((j / 3) | 0)) % colors.length];
 				ctx.fillRect(0, i * 8, 300, 8);
