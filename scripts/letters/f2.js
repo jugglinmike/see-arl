@@ -11,7 +11,7 @@ define(function() {
 			var diff = { x: pos.left - mouse.x + (elem.height() / 2), y: pos.top - mouse.y + (elem.width() / 2)};
 			var dist = Math.pow( Math.pow(diff.x, 2) + Math.pow(diff.y, 2), 0.5 );
 			var rot = -((Math.atan2(diff.x, diff.y) * 180 / Math.PI) + 180) % 360;
-			var fontSize = (Math.log(dist)) * 10;
+			var fontSize = (Math.log(dist) + 1.5) * 10;
 			maxSize = Math.max(fontSize, maxSize);
 			elem.css({
 				transform: 'rotate(' + rot + 'deg)',
