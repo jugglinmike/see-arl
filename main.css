@@ -83,6 +83,11 @@ iframe {
   width: 5em;
 }
 
+.jory {
+  padding: 80px 100px;
+  background-image: url(assets/moving_s.gif);
+}
+
 .letter-a {
     font-size: 100px !important;
     -webkit-animation: color-change 1s infinite;
