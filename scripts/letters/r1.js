@@ -8,6 +8,14 @@ define(function(require) {
 
 	return function(elem) {
     var $elem = $(elem);
+    $elem.css({
+      position: 'relative',
+      top: '-100px',
+      zoom: 4
+    }).animate({
+      top: '0px',
+      zoom: 3
+    });
 
 		$elem.html("r");
 
@@ -53,9 +61,8 @@ define(function(require) {
       return img.remove();
     });
 
-    $elem
+    return $elem
       .animate({
-        zoom: 4,
         opacity: .5,
         marginTop: "40px"
       }, 1000)
