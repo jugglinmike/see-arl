@@ -264,3 +264,13 @@ iframe {
     transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
   }
 }
+.Jasmin{
+  background-image:url(http://37.media.tumblr.com/tumblr_mcxa05j60U1qgd7tso1_500.gif);
+  width: 150px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  background-position: center bottom;
+}
+
