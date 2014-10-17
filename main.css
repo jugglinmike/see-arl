@@ -44,6 +44,10 @@ iframe {
 	font-size: 344px;
 }
 
+.medium {
+  font-size: 100px;
+}
+
 
 .letter.yannick {
 	font-size: 4em;
@@ -90,6 +94,11 @@ iframe {
     transform: rotate(45deg);
 }
 
+.letter-g2 {
+	-webkit-transition: font-size 1.5s, color 250ms;
+	transition: font-size 1.5s, color 250ms;
+	font-family: 'Brush Script MT', 'Comic Sans MS', Papyrus, monospace;
+}
 @-webkit-keyframes color-change {
     0% { color: red; }
     50% { color: blue; }
