@@ -1,5 +1,47 @@
+html, body {
+	height: 100%;
+}
 .letter {
 	display: inline-block;
+	font-size: 3em;
+}
+
+.letter.o2 {
+	font-weight: bold;
+	color: #333;
+	animation-name: tumble;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+.letter.vine {
+	vertical-align: middle;
+}
+
+@keyframes tumble {
+	from {
+		transform: rotateZ(0);
+	}
+
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+iframe {
+  border: 0;
+}
+
+.color-party {
+	-webkit-transition: font-size 2s, color 500ms;
+	transition: font-size 2s, color 500ms;
+	font-size: 16px;
+	font-family: 'Comic Sans', 'Comic Sans MS', Papyrus, monospace;
+}
+
+.huge {
+	font-size: 344px;
 }
 
 
