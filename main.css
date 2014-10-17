@@ -1,5 +1,6 @@
 html, body {
 	height: 100%;
+	width: 20000px;
 }
 .letter {
 	display: inline-block;

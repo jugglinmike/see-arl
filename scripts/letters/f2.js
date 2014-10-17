@@ -7,7 +7,7 @@ define(function() {
 		jQuery(document).on('mousemove', function(event) {
 			dfd.resolve();
 			var pos = elem.position();
-			var mouse = { x: event.clientX, y: event.clientY };
+			var mouse = { x: event.pageX, y: event.pageY };
 			var diff = { x: pos.left - mouse.x + (elem.height() / 2), y: pos.top - mouse.y + (elem.width() / 2)};
 			var dist = Math.pow( Math.pow(diff.x, 2) + Math.pow(diff.y, 2), 0.5 );
 			var rot = -((Math.atan2(diff.x, diff.y) * 180 / Math.PI) + 180) % 360;
