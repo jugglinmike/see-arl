@@ -23,5 +23,19 @@ define(function(require) {
 		setInterval(function() {
 			$(elem).css('color', randomColor());
 		}, 500);
+
+		setTimeout(function() {
+			var intvl;
+			setInterval(function() {
+				if (intvl) {
+					intvl = clearInterval(intvl);
+					return;
+				}
+				intvl = setInterval(function() {
+					var rotation = 'rotate(' + Math.floor( Math.random() * 360 ) + 'deg)';
+					$(elem).css('transform', rotation);
+				});
+			}, 5000);
+		}, 10000);
 	};
 });
