@@ -28,12 +28,17 @@ define(function() {
 
     var createTyper = function (id) {
       var typer = document.createElement('div');
-      typer.style.height = '25px';
-      typer.style.lineHeight = '25px';
+      typer.style.height = '40px';
+      typer.style.lineHeight = '40px';
+      typer.style.fontSize = '25px';
       typer.style.backgroundColor = '#000';
       typer.style.color = '#fff';
-      typer.style.padding = '0 5px';
-      typer.innerHTML = 'click me';
+      typer.style.padding = '0 10px';
+      typer.style.cursor = 'pointer';
+      typer.style.position = 'absolute';
+      typer.style.top = 0;
+      typer.style.left = 0;
+      typer.style.right = 0;
       typer.addEventListener('click', function () {
         typer.len = 0;
         clearInterval(timer);
@@ -84,7 +89,7 @@ define(function() {
     }
 
     var messageBox = createTyper();
-
+    elem.style.fontSize = '100px';
     elem.innerHTML = 'e';
   };
 });
