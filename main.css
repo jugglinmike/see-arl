@@ -274,3 +274,14 @@ iframe {
   background-position: center bottom;
 }
 
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(assets/pacifico-regular.woff) format('woff');
+}
+
+.letter.r3 {
+  font-family: 'Pacifico', cursive;
+  color: #a00;
+}

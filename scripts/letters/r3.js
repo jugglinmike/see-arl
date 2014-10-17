@@ -1,5 +1,6 @@
 define(function() {
 	return function(elem) {
-		elem.innerHTML = 'r';
+		elem.innerHTML = 'R';
+		elem.classList.add('r3');
 	};
 });
