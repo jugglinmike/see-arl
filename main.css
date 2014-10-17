@@ -67,6 +67,12 @@ iframe {
   width: 1em;
 }
 
+.letter.ashley {
+  color: pink;
+  padding: 80px 40px;
+  background-image: url(assets/majestic.gif);
+  background-position: 100px;
+}
 
 .yannick:hover {
   width: 5em;
