@@ -6,5 +6,6 @@ define(function() {
         iframe.style.width = 150+"px";
         iframe.style.height = 150+"px";
     elem.appendChild(iframe);
+    elem.classList.add('vine');
   };
 });

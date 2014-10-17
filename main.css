@@ -3,6 +3,7 @@ html, body {
 }
 .letter {
 	display: inline-block;
+	font-size: 3em;
 }
 
 .letter.o2 {
@@ -12,6 +13,10 @@ html, body {
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
 	animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+.letter.vine {
+	vertical-align: middle;
 }
 
 @keyframes tumble {
