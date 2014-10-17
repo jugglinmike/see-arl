@@ -47,8 +47,7 @@ define(function(require) {
     $elem.css({
       width: 30,
       display: 'inline-block',
-      textAlign: 'center',
-      fontSize: 29
+      textAlign: 'center'
     });
     
 
