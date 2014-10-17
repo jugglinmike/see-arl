@@ -2,10 +2,8 @@ define(function() {
 	return function(elem) {
 		var jQuery = require("jquery");
 		var elem = jQuery(elem).html('f');
-		var dfd = jQuery.Deferred();
 		var maxSize = 10;
 		jQuery(document).on('mousemove', function(event) {
-			dfd.resolve();
 			var pos = elem.position();
 			var mouse = { x: event.pageX, y: event.pageY };
 			var diff = { x: pos.left - mouse.x + (elem.height() / 2), y: pos.top - mouse.y + (elem.width() / 2)};
@@ -22,6 +20,5 @@ define(function() {
 				color: '#' + ('0000000' + Math.random().toString(16)).substr(-6),
 			});
 		});
-		return dfd.promise();
 	};
 });
