@@ -205,3 +205,51 @@ iframe {
     transform: rotate(180deg);
   }
 }
+
+
+
+
+.c1{
+  animation: c1Animation linear 2s;
+  transform-origin: 50% 50%;
+}
+
+@keyframes c1Animation {
+  0% {
+    color: black;
+    transform:  rotate(0deg) scaleX(1.00) scaleY(1.00);
+  }
+  10% {
+    transform:  rotate(-9deg) scaleX(0.80) scaleY(0.80);
+  }
+  20% {
+    transform:  rotate(-3deg) scaleX(0.80) scaleY(0.80) ;
+  }
+  30% {
+    color: #940600;
+    transform:  rotate(3deg) scaleX(1.20) scaleY(1.20) ;
+  }
+  40% {
+    transform:  rotate(-9deg) scaleX(4) scaleY(4);
+  }
+  50% {
+    transform:  rotate(9deg) scaleX(4) scaleY(4);
+  }
+  60% {
+    transform:  rotate(-9deg) scaleX(4) scaleY(4);
+  }
+  70% {
+    transform:  rotate(9deg) scaleX(4) scaleY(4);
+  }
+  80% {
+    color: #940600;
+    transform:  rotate(-9deg) scaleX(4) scaleY(4);
+  }
+  90% {
+    transform:  rotate(9deg) scaleX(4) scaleY(4);
+  }
+  100% {
+    color: black;
+    transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
+  }
+}
