@@ -109,3 +109,23 @@ iframe {
     50% { color: blue; }
     100% { color: red; }
 }
+
+[title="Wilto"] {
+	display: inline;
+	font-family: fantasy;
+	-webkit-transition: -webkit-transform 3s cubic-bezier(0.42, -0.25, 0.58, 1.15), -webkit-filter 5s ease-in-out, font-size 3s cubic-bezier(0.42, -0.25, 0.58, 1.15);
+	transition: transform 3s cubic-bezier(0.42, -0.25, 0.58, 1.15), filter 5s ease-in-out, font-size 3s cubic-bezier(0.42, -0.25, 0.58, 1.15);
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	-webkit-transform: rotate(25deg) translateX(-50em);
+	transform: rotate(25deg) translateX(-50em);
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	font-size: 3em;
+}
+[title="Wilto"].doin-thangs {
+	-webkit-transform: scale(1) rotate(0deg) translateX(0);
+	transform: scale(1) rotate(0deg) translateX(0);
+	-webkit-filter: none;
+	filter: none;
+}
