@@ -58,15 +58,16 @@ define(function() {
       ].join('');
 
       var nextLetterDelay = 50+(Math.random()*100);
-      var lastLetter = el.innerText.slice(-2)[0];
+      var text = el.innerText || el.textContent;
+      var lastLetter = text.slice(-2)[0];
       var endOfSentence = ['.','?'].indexOf(lastLetter) !== -1;
       if (endOfSentence) {
         nextLetterDelay = 500;
       }
-      if (el.innerText.length <= msg.length) {
+      if (text.length <= msg.length) {
         timer = setTimeout(show.bind(null, opts), nextLetterDelay);
       } else {
-        el.innerHTML = el.innerText;
+        el.innerHTML = text;
         timer = setInterval(flash.bind(null, opts), 450);
       }
     }
