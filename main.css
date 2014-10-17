@@ -32,3 +32,14 @@ html, body {
 iframe {
   border: 0;
 }
+
+.color-party {
+	-webkit-transition: font-size 2s, color 500ms;
+	transition: font-size 2s, color 500ms;
+	font-size: 16px;
+	font-family: 'Comic Sans', 'Comic Sans MS', Papyrus, monospace;
+}
+
+.huge {
+	font-size: 344px;
+}
