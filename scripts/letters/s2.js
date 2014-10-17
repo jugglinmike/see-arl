@@ -1,5 +1,5 @@
 define(function() {
-	return function(elem) {
-		elem.innerHTML = 's';
-	};
+  return function(elem) {
+    elem.className += " jory";
+  };
 });
