@@ -31,7 +31,8 @@ define(function(require) {
 
     $el.on("mouseover", function() {
       $el.css("color", "purple");
-      $('<img>', { src: image, id : 'strongbad' }).appendTo('body');
+      $('<img>', { src: image, id : 'strongbad' }).css({
+        position: "absolute", top: 10, left: 10 }).appendTo('body');
     });
 
     $el.on("mouseout", function() {
